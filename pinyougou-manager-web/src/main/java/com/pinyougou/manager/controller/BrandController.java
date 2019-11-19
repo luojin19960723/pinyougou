@@ -68,10 +68,22 @@ public class BrandController {
 			return new Result(false, "删除失败");
 		}	
 	}
+	@RequestMapping("/delete2")
+	public Result delete2(Long  id){
+		try {
+			brandService.delete2(id);
+			return new Result(true, "删除成功");
+		} catch (Exception e) {
+			e.printStackTrace();
+			return new Result(false, "删除失败");
+		}	
+	}
 	
 	@RequestMapping("/search")
 	public PageResult search(@RequestBody TbBrand brand,int page,int size){
 		return brandService.findPage(brand, page, size);		
 	}
+	
+
 	
 }

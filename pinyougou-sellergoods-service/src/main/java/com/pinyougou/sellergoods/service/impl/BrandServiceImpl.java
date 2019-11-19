@@ -81,5 +81,7 @@ public class BrandServiceImpl implements BrandService {
 		
 		return new PageResult(page.getTotal(), page.getResult());
 	}
-
+   public void delete2(long id) {
+	   brandMapper.deleteByPrimaryKey(id);
+   }
 }
