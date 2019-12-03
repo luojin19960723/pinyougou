@@ -17,7 +17,10 @@ app.service('specificationService',function($http){
 	this.add=function(entity){
 		return  $http.post('../specification/add.do',entity );
 	}
-	//修改 
+	this.addentity=function(entity){
+		return  $http.post('../specification/addentity.do',entity );
+	}
+	//修改
 	this.update=function(entity){
 		return  $http.post('../specification/update.do',entity );
 	}
